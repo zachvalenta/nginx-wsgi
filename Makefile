@@ -1,3 +1,9 @@
+help:
+	@echo "rf:  run Flask"
+	@echo "hf:  hit Flask server"
+	@echo "rg:  run Gunicorn"
+	@echo "hg:  git Gunicorn server"
+
 rf:
 	python3 myproject.py
 
