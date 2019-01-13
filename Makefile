@@ -1,8 +1,9 @@
 help:
-	@echo "rf:  run Flask"
-	@echo "hf:  hit Flask server"
-	@echo "rg:  run Gunicorn"
-	@echo "hg:  git Gunicorn server"
+	@echo "rf:      run Flask"
+	@echo "hf:      hit Flask server"
+	@echo "rg:      run Gunicorn"
+	@echo "hg:      git Gunicorn server"
+	@echo "pip-in:  install dependencies"
 
 rf:
 	python3 myproject.py
@@ -15,3 +16,6 @@ rg:
 
 hg:
 	qiu -po 8000
+
+pip-in:
+	pip install -r requirements.txt
