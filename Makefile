@@ -17,5 +17,5 @@ rg:
 hg:
 	qiu -po 8000
 
-pip-in:
+pipin:
 	pip install -r requirements.txt
