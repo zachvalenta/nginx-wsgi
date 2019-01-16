@@ -1,6 +1,9 @@
 # OVERVIEW
 
-the most 😃 of hello worlds for Flask server setup
+* __what__: hello world for Python server setup on macOS 🍎
+* __why__: most guides show setup on a Linux server (which makes sense) but macoS is useful for learning and local dev
+
+📝 I'm using Flask here but the gunicorn and Nginx config holds true for any WSGI server
 
 ## what we'll do
 
