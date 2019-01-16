@@ -2,16 +2,26 @@
 
 the most 😃 of hello worlds for Flask server setup
 
-we're going for __the simplest version__ of ⬇️
+## what we'll do
 
 ```
-+----------+      +----------+      +-------+
-| Nginx    |----> | gunicorn |----> | Flask |
-+----------+      +----------+      +-------+
++--------+       +----------+       +-------+
+| Nginx  | ----> | gunicorn | ----> | Flask |
++--------+       +----------+       +-------+
 ```
 
-# install
+## install
 
-* just follow the Makefile
+* install Nginx: `brew install nginx`
+* create a virtual environment
+* install dependencies: `make pipin`
 
-📝 I use `httpie` to hit the servers, but `curl` or a browser work just as well
+## hit Flask
+
+* run: `make rf`
+* hit: `make hf`
+
+## hit Flask through Gunicorn
+
+* run gunicorn: `make rg`
+* hit gunicorn: `make hg`
