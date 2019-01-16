@@ -9,13 +9,13 @@ rf:
 	python3 myproject.py
 
 hf:
-	qiu -po 5000
+	http http://127.0.0.1:5000
 
 rg:
 	gunicorn --bind 0.0.0.0:8000 wsgi
 
 hg:
-	qiu -po 8000
+	http http://127.0.0.1:8000
 
 pipin:
 	pip install -r requirements.txt
