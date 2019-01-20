@@ -1,9 +1,11 @@
 help:
-	@echo "rf:      run Flask"
+	@echo
 	@echo "hf:      hit Flask server"
-	@echo "rg:      run Gunicorn"
 	@echo "hg:      git Gunicorn server"
-	@echo "pip-in:  install dependencies"
+	@echo "pipin:   install dependencies"
+	@echo "rf:      run Flask"
+	@echo "rg:      run Gunicorn"
+	@echo
 
 hf:
 	http http://127.0.0.1:5000
