@@ -3,8 +3,6 @@
 * __what__: hello world for Python server setup on macOS 🍎
 * __why__: most guides show setup on a Linux server (which makes sense) but macoS is useful for learning and for local dev
 
-📝 I'm using Flask here but the gunicorn and Nginx config holds true for any WSGI server
-
 ## what we'll do
 
 ```language
@@ -35,7 +33,9 @@
 +----------------+
 ```
 
-## first step: Nginx ➡️ static assets
+📝 I'm using Flask here but the gunicorn and Nginx config should hold true for any WSGI server -> if you try this with Django, Tornado, et al. and run into problems open an issue and we'll figure it out!
+
+## step 1: Nginx ➡️ static assets
 
 ```language
                 +---------------+
@@ -71,11 +71,33 @@
 ```conf
 location / {
 -   root   html;
-+   root   path/to/nginx-gunicorn-flask;
++   root   path/to/nginx-gunicorn-flask/assets;
 -   index  index.html index.htm;
 +   index  my-asset.html;
 }
 ```
 * tell Nginx about updated config: `nginx -s reload`
-* validate Nginx serving our static assets: hit `localhost:8080` to view our, ahem, bespoke html 😄
+* validate Nginx serving our static assets: hit `localhost:8080` to view the, ahem, bespoke html 😄
 
+## step 2: gunicorn ➡️ Flask
+
+```language
++----------------+                   
+|    gunicorn    |                   
+|                |                   
+|                |             
++----------------+             
+        X                      
+        X                      
++----------------+             
+|    Flask       |
+|                |
+|                |
++----------------+
+```
+
+* go into the repo and install the requirements: `make pipin` --> 📝 see more commands via `make help`
+* run Flask: `make rf`
+* validate Flask running: hit `localhost:5000`
+* run gunicorn: `make rg`
+* validate gunicorn passing requests to Flask: hit `localhost:8000`
