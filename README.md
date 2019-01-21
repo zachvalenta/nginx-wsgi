@@ -69,7 +69,7 @@
 
 * start Nginx: `make ns`
 * hit Nginx: `make nh` to view the default Nginx welcome page
-* next, go update the Nginx conf (`/etc/nginx/nginx.conf`) by changeing `root` to point to our repo's static assets
+* next, go update the Nginx conf (`/etc/nginx/nginx.conf`) by changing `root` to point to our repo's static assets
 ```diff
 ```conf
 location / {
