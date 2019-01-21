@@ -8,6 +8,7 @@ help:
 	@echo
 	@echo "ns:      Nginx - start"
 	@echo "nh:      Nginx - hit server"
+	@echo "nhs:     Nginx - hit static assets"
 	@echo "nr:      Nginx - reload configuration"
 	@echo "nq:      Nginx - quit"
 	@echo
@@ -31,6 +32,9 @@ ns:
 
 nh:
 	http http://127.0.0.1:8080
+
+nhs:
+	http http://127.0.0.1:8080/static/
 
 nr:
 	nginx -s reload
