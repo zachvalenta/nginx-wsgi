@@ -1,23 +1,42 @@
 help:
 	@echo
-	@echo "hf:      hit Flask server"
-	@echo "hg:      git Gunicorn server"
+	@echo "fs:      Flask - start"
+	@echo "fh:      Flask - hit server"
+	@echo
+	@echo "gr:      Gunicorn - start"
+	@echo "gh:      Gunicorn - hit server"
+	@echo
+	@echo "ns:      Nginx - start"
+	@echo "nh:      Nginx - hit server"
+	@echo "nr:      Nginx - reload configuration"
+	@echo "nq:      Nginx - quit"
+	@echo
 	@echo "pipin:   install dependencies"
-	@echo "rf:      run Flask"
-	@echo "rg:      run Gunicorn"
 	@echo
 
-hf:
+fs:
+	python3 myproject.py
+
+fh:
 	http http://127.0.0.1:5000
 
-hg:
+gs:
+	gunicorn --bind 0.0.0.0:8000 wsgi
+
+gh:
 	http http://127.0.0.1:8000
+
+ns:
+	nginx
+
+nh:
+	http http://127.0.0.1:8080
+
+nr:
+	nginx -s reload
+
+nq:
+	nginx -s quit
 
 pipin:
 	pip install -r requirements.txt
-
-rf:
-	python3 myproject.py
-
-rg:
-	gunicorn --bind 0.0.0.0:8000 wsgi

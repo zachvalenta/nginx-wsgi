@@ -33,7 +33,12 @@
 +----------------+
 ```
 
-📝 I'm using Flask here but the gunicorn and Nginx config should hold true for any WSGI server -> if you try this with Django, Tornado, et al. and run into problems open an issue and we'll figure it out!
+## things we'll use
+
+* packages from Homebrew: `nginx` and `httpie`
+* Python 3
+* Makefile for our commands (to understand what all the commands do, just run `make help`)
+* Flask for the webserver (our gunicorn and Nginx config should hold true for any WSGI server -> if you try this with Django, Tornado, et al. and run into a problem, just open an issue and we'll figure it out!)
 
 ## step 1: Nginx ➡️ static assets
 
@@ -62,11 +67,9 @@
 
 ```
 
-* install Nginx: `brew install nginx`
-* start Nginx: `nginx`
-* validate Nginx running: hit `localhost:8080` to view the default Nginx welcome page
-* clone the repo
-* update Nginx conf (`/etc/nginx/nginx.conf`): change `root` to point to repo's static assets
+* start Nginx: `make ns`
+* hit Nginx: `make nh` to view the default Nginx welcome page
+* next, go update the Nginx conf (`/etc/nginx/nginx.conf`) by changeing `root` to point to our repo's static assets
 ```diff
 ```conf
 location / {
@@ -76,8 +79,8 @@ location / {
 +   index  my-asset.html;
 }
 ```
-* tell Nginx about updated config: `nginx -s reload`
-* validate Nginx serving our static assets: hit `localhost:8080` to view the, ahem, bespoke html 😄
+* reload Nginx so it knows about our updated config: `make nr`
+* hit Nginx again to validate it's serving our bespoke HTML 😄: `make nh`
 
 ## step 2: gunicorn ➡️ Flask
 
@@ -96,8 +99,8 @@ location / {
 +----------------+
 ```
 
-* go into the repo and install the requirements: `make pipin` --> 📝 see more commands via `make help`
-* run Flask: `make rf`
-* validate Flask running: hit `localhost:5000`
-* run gunicorn: `make rg`
-* validate gunicorn passing requests to Flask: hit `localhost:8000`
+* install the Python requirements: `make pipin`
+* start Flask: `make fs`
+* hit Flask: `make fh`
+* start gunicorn: `make gs`
+* ok, now let's validate gunicorn is passing requests to Flask: `make gh`
