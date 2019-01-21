@@ -69,7 +69,7 @@
 
 * start Nginx: `make ns`
 * hit Nginx: `make nh` to view the default Nginx welcome page
-* next, go update the Nginx conf (`/etc/nginx/nginx.conf`) by changing `root` to point to our repo's static assets
+* next, go update the Nginx conf (`/etc/nginx/nginx.conf`) to point at our repo
 ```diff
 ```conf
 location / {
@@ -103,4 +103,4 @@ location / {
 * start Flask: `make fs`
 * hit Flask: `make fh`
 * start gunicorn: `make gs`
-* ok, now let's validate gunicorn is passing requests to Flask: `make gh`
+* hit gunicorn to validate that it passes the request to Flask: `make gh`
