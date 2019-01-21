@@ -67,11 +67,11 @@
 
 ```
 
-* start Nginx: `make ns`
-* hit Nginx: `make nh` to view the default Nginx welcome page
+* start Nginx: `ng-serve`
+* hit Nginx: `ng-hit` to view the default Nginx welcome page
 
 ```sh
-$ make nh
+$ make ng-hit
 
 http http://127.0.0.1:8080
 HTTP/1.1 200 OK
@@ -91,11 +91,11 @@ HTTP/1.1 200 OK
 }
 ```
 
-* reload Nginx so it knows about our updated config: `make nr`
-* hit Nginx at the `static` route to validate it's serving our bespoke HTML 😄: `make nh`
+* reload Nginx so it knows about our updated config: `ng-up`
+* hit Nginx at the `static` route to validate it's serving our bespoke HTML 😄: `ng-hit-static`
 
 ```sh
-$ make nhs
+$ make ng-hit-static
 
 http http://127.0.0.1:8080/static/
 HTTP/1.1 200 OK
@@ -121,21 +121,21 @@ HTTP/1.1 200 OK
 ```
 
 * [make a virtual environment and activate it](https://realpython.com/python-virtual-environments-a-primer/), then install the dependencies: `make pipin`
-* start Flask: `make fs`
-* hit Flask on port 5000: `make fh`
+* start Flask: `make flask-serve`
+* hit Flask on port 5000: `make flask-hit`
 
 ```sh
-$ m fh
+$ m flask-hit
 
 http http://127.0.0.1:5000
 <h1>Flask running!</h1>
 ```
 
-* start gunicorn: `make gs`
-* hit gunicorn on port 8000 to validate that it passes the request to Flask on port 5000: `make gh`
+* start gunicorn: `make guni-serve`
+* hit gunicorn on port 8000 to validate that it passes the request to Flask on port 5000: `make guni-hit`
 
 ```diff
-$ m gh
+$ m guni-hit
 
 http http://127.0.0.1:8000
 <h1>Flask running!</h1>
@@ -172,11 +172,11 @@ http http://127.0.0.1:8000
 + }
 ```
 
-* reload Nginx so it knows about our updated config: `make nr`
-* hit Nginx: `make nh` -> this time, instead of the default Nginx page, we'll see that the request passes from Nginx to gunicorn and finally Flask
+* reload Nginx so it knows about our updated config: `make ng-up`
+* hit Nginx: `make ng-hit` -> this time, instead of the default Nginx page, we'll see that the request passes from Nginx to gunicorn and finally Flask
 
 ```sh
-$ make nh
+$ make ng-hit
 
 http http://127.0.0.1:8080
 HTTP/1.1 200 OK

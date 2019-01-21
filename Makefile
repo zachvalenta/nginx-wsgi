@@ -1,45 +1,45 @@
 help:
 	@echo
-	@echo "fs:      Flask - start"
-	@echo "fh:      Flask - hit server"
+	@echo "flask-serve:     Flask - start server"
+	@echo "flask-hit:  		Flask - hit server"
 	@echo
-	@echo "gr:      Gunicorn - start"
-	@echo "gh:      Gunicorn - hit server"
+	@echo "guni-serve:		Gunicorn - start server"
+	@echo "guni-hit:      	Gunicorn - hit server"
 	@echo
-	@echo "ns:      Nginx - start"
-	@echo "nh:      Nginx - hit server"
-	@echo "nhs:     Nginx - hit static assets"
-	@echo "nr:      Nginx - reload configuration"
-	@echo "nq:      Nginx - quit"
+	@echo "ng-serve:      	Nginx - start server"
+	@echo "ng-hit:      	Nginx - hit server"
+	@echo "ng-hit-static:   Nginx - hit static assets"
+	@echo "ng-up:      		Nginx - reload configuration"
+	@echo "ng-quit:      	Nginx - quit"
 	@echo
-	@echo "pipin:   install dependencies"
+	@echo "pipin:   		install dependencies"
 	@echo
 
-fs:
+flask-serve:
 	python3 myproject.py
 
-fh:
+flask-hit:
 	http http://127.0.0.1:5000
 
-gs:
+guni-serve:
 	gunicorn --bind 0.0.0.0:8000 wsgi
 
-gh:
+guni-hit:
 	http http://127.0.0.1:8000
 
-ns:
+ng-serve:
 	nginx
 
-nh:
+ng-hit:
 	http http://127.0.0.1:8080
 
-nhs:
+ng-hit-static:
 	http http://127.0.0.1:8080/static/
 
-nr:
+ng-up:
 	nginx -s reload
 
-nq:
+ng-quit:
 	nginx -s quit
 
 pipin:
