@@ -38,7 +38,7 @@
 * packages from Homebrew: `nginx` and `httpie`
 * Python 3
 * Makefile for our commands (to understand what all the commands do, just run `make help`)
-* Flask for the webserver (our gunicorn and Nginx config should hold true for any WSGI server -> if you try this with Django, Tornado, et al. and run into a problem, just open an issue and we'll figure it out!)
+* Flask for the webserver (our gunicorn and Nginx config should hold true for any WSGI server -> if you try this with Django, Pyramid, et al. and run into a problem, just open an issue and we'll figure it out!)
 
 # STEP 1: NGINX ➡️ STATIC ASSETS
 
