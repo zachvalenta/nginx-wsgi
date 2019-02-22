@@ -67,6 +67,7 @@
 
 ```
 
+* download Nginx using Homebrew: `brew install nginx`
 * start Nginx: `ng-serve`
 * hit Nginx: `ng-hit` to view the default Nginx welcome page
 
@@ -173,7 +174,7 @@ http http://127.0.0.1:8000
 ```
 
 * reload Nginx so it knows about our updated config: `make ng-up`
-* hit Nginx: `make ng-hit` -> this time, instead of the default Nginx page, we'll see that the request passes from Nginx to gunicorn and finally Flask
+* hit Nginx: `make ng-hit` -> this time, instead of the default Nginx page, we'll see that the request passes from Nginx to gunicorn and finally to Flask
 
 ```sh
 $ make ng-hit
@@ -216,7 +217,7 @@ Now, everything is wired together:
 +----------------+
 ```
 
-This guide is just to get you up-and-running: For more explanation, here are some articles that helped me:
+This guide is just to get you up-and-running. For more explanation, here are some articles that helped me:
 
 * http://cheng.logdown.com/posts/2015/01/29/deploy-django-nginx-gunicorn-on-mac-osx-part-2
 * http://honza.ca/2011/05/deploying-django-with-nginx-and-gunicorn
