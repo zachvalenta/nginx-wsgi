@@ -69,7 +69,7 @@
 
 * download Nginx using Homebrew: `brew install nginx`
 * start Nginx: `make ng-serve`
-* hit Nginx: `make ng-hit` to view the default Nginx welcome page
+* hit Nginx: `make ng-hit` to hit our Nginx server, which will return its default welcome page
 
 ```sh
 $ make ng-hit
@@ -80,7 +80,7 @@ HTTP/1.1 200 OK
 <h1>Welcome to nginx!</h1>
 ```
 
-* next, go update the Nginx conf (`/etc/nginx/nginx.conf`) to point at our repo's static assets
+* next, go update the Nginx configuration file (`/etc/nginx/nginx.conf`) to point at our repo's static assets
 
 ```diff
 - location / {
