@@ -1,18 +1,26 @@
 help:
 	@echo
-	@echo "flask-serve:     Flask - start server"
-	@echo "flask-hit:  		Flask - hit server"
+	@echo "🍶 FLASK"
 	@echo
-	@echo "guni-serve:		Gunicorn - start server"
-	@echo "guni-hit:      	Gunicorn - hit server"
+	@echo "*flask-serve*: start server"
+	@echo "*flask-hit*: hit server"
 	@echo
-	@echo "ng-serve:      	Nginx - start server"
-	@echo "ng-hit:      	Nginx - hit server"
-	@echo "ng-hit-static:   Nginx - hit static assets"
-	@echo "ng-up:      		Nginx - reload configuration"
-	@echo "ng-quit:      	Nginx - quit"
+	@echo "🦄 GUNICORN"
 	@echo
-	@echo "pipin:   		install dependencies"
+	@echo "*guni-serve*: start server"
+	@echo "*guni-hit*: hit server"
+	@echo
+	@echo "❎ NGINX"
+	@echo
+	@echo "*ng-serve*: start server"
+	@echo "*ng-hit*: hit server"
+	@echo "*ng-static*: hit static assets"
+	@echo "*ng-up*: reload configuration"
+	@echo "*ng-quit*: quit"
+	@echo
+	@echo "📦 DEPENDENCIES"
+	@echo
+	@echo "*pipin*: install dependencies from requirements.txt"
 	@echo
 
 flask-serve:
