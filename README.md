@@ -68,8 +68,8 @@
 ```
 
 * download Nginx using Homebrew: `brew install nginx`
-* start Nginx: `ng-serve`
-* hit Nginx: `ng-hit` to view the default Nginx welcome page
+* start Nginx: `make ng-serve`
+* hit Nginx: `make ng-hit` to view the default Nginx welcome page
 
 ```sh
 $ make ng-hit
@@ -92,8 +92,8 @@ HTTP/1.1 200 OK
 }
 ```
 
-* reload Nginx so it knows about our updated config: `ng-up`
-* hit Nginx at the `static` route to validate it's serving our bespoke HTML 😄: `ng-hit-static`
+* reload Nginx so it knows about our updated config: `make ng-up`
+* hit Nginx at the `static` route to validate it's serving our bespoke HTML 😄: `make ng-hit-static`
 
 ```sh
 $ make ng-hit-static
@@ -126,7 +126,7 @@ HTTP/1.1 200 OK
 * hit Flask on port 5000: `make flask-hit`
 
 ```sh
-$ m flask-hit
+$ make flask-hit
 
 http http://127.0.0.1:5000
 <h1>Flask running!</h1>
@@ -136,7 +136,7 @@ http http://127.0.0.1:5000
 * hit gunicorn on port 8000 to validate that it passes the request to Flask on port 5000: `make guni-hit`
 
 ```diff
-$ m guni-hit
+$ make guni-hit
 
 http http://127.0.0.1:8000
 <h1>Flask running!</h1>
