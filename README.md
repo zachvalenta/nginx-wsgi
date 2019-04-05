@@ -3,6 +3,8 @@
 * __what__: setup servers (Nginx, Gunicorn) 🦄 on macOS 🍎 for Python 🐍
 * __why__: most guides show setup on a Linux server (which makes sense) but macoS is useful for learning and for local dev
 
+📝 I've also posted this on [Stack Overflow](https://stackoverflow.com/a/54298517) (in very condensed form!)
+
 # WHAT WE'LL DO
 
 ```language
