@@ -1,9 +1,8 @@
 # OVERVIEW
 
-* __what__: setup servers (Nginx, Gunicorn) 🦄 on macOS 🍎 for Python 🐍
-* __why__: most guides show setup on a Linux server (which makes sense) but macoS is useful for learning and for local dev
+Most guides show how to set up servers on a Linux box (which makes sense) but macOS also works if you don't have a Linux box handy.
 
-📝 I've also posted this on [Stack Overflow](https://stackoverflow.com/a/54298517) (in very condensed form!)
+I've also posted this on [Stack Overflow](https://stackoverflow.com/a/54298517) in very condensed form.
 
 # WHAT WE'LL DO
 
@@ -219,8 +218,4 @@ Now, everything is wired together:
 +----------------+
 ```
 
-This guide is just to get you up-and-running. For more explanation, here are some articles that helped me:
-
-* http://cheng.logdown.com/posts/2015/01/29/deploy-django-nginx-gunicorn-on-mac-osx-part-2
-* http://honza.ca/2011/05/deploying-django-with-nginx-and-gunicorn
-* https://www.patricksoftwareblog.com/how-to-configure-nginx-for-a-flask-web-application/
+This guide is just to get you up-and-running. For more explanation, here are some articles that helped me from three guys named [Cheng](http://cheng.logdown.com/posts/2015/01/29/deploy-django-nginx-gunicorn-on-mac-osx-part-2), [Honza](http://honza.ca/2011/05/deploying-django-with-nginx-and-gunicorn), and [Patrick]( https://www.patricksoftwareblog.com/how-to-configure-nginx-for-a-flask-web-application/)
