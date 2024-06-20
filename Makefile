@@ -14,7 +14,7 @@ help:
 	@echo
 	@echo "*ng-serve*: start server"
 	@echo "*ng-hit*: hit server"
-	@echo "*ng-static*: hit static assets"
+	@echo "*ng-hit-static*: hit static assets"
 	@echo "*ng-up*: reload configuration"
 	@echo "*ng-quit*: quit"
 	@echo
