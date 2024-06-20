@@ -94,10 +94,10 @@ HTTP/1.1 200 OK
 ```
 
 * reload Nginx so it knows about our updated config: `make ng-up`
-* hit Nginx at the `static` route to validate it's serving our bespoke HTML 😄: `make ng-static`
+* hit Nginx at the `static` route to validate it's serving our bespoke HTML 😄: `make ng-hit-static`
 
 ```sh
-$ make ng-static
+$ make ng-hit-static
 
 http http://127.0.0.1:8080/static/
 HTTP/1.1 200 OK
